@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Starmap-Buffs", "Starmap-Buffs\Starmap-Buffs.csproj", "{8BA104CE-722C-46FA-A0EE-DC025A26A5CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Miner-Info", "Miner-Info\Miner-Info.csproj", "{A2EAACA8-34EC-4933-AA15-655E49799561}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BA104CE-722C-46FA-A0EE-DC025A26A5CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BA104CE-722C-46FA-A0EE-DC025A26A5CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BA104CE-722C-46FA-A0EE-DC025A26A5CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BA104CE-722C-46FA-A0EE-DC025A26A5CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2EAACA8-34EC-4933-AA15-655E49799561}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2EAACA8-34EC-4933-AA15-655E49799561}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2EAACA8-34EC-4933-AA15-655E49799561}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2EAACA8-34EC-4933-AA15-655E49799561}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {83EB4EE8-0803-4DEE-9ED3-09F1EED9C44C}
+	EndGlobalSection
+EndGlobal
