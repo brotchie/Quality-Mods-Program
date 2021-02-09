@@ -1,14 +1,11 @@
 # Quality Mods Program
-
-[TOC]
-
 Quality-of-Life mods for Dyson Sphere Program. Currently three mods:
 
 1. Show vein max miner output per second,
 2. Pin star with shift click,
 3. Show star details on hover.
 
-
+See below for details of each mod, **installation instructions are at the bottom**.
 
 ## Miner Info Mod
 Plugin: `Quality-Mods-Program-Miner-Info.dll`
