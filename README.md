@@ -38,7 +38,7 @@ Config Option: `ShowStarDetailsOnHover`
 4. Start DSP from Steam (Note, it sometimes won't work if you try and run DSPGAME.exe directly!). 
 5. Exit DSP immediately after you see the menu.
 6. Check in the `BepInEx` folder in your DSP game folder, you should see a `plugins` folder, this is where you're going to put the Quality Mods Program plugins. This folder will typically be `C:\Program Files (x86)\Steam\steamapps\common\Dyson Sphere Program\BepInEx\plugins`.
-7. Download the latest Quality Mods Program plugins (DLLs) from the [Release page](releases/) into your plugins folder from the previous step.
+7. Download the latest Quality Mods Program plugins (DLLs) from the [Release page](https://github.com/brotchie/Quality-Mods-Program/releases) into your plugins folder from the previous step.
 8. Start DSP from Steam.
 9. Exit DSP immediately after you see the menu.
 10. Go to your `BepInEx` config folder. This folder will typically be `C:\Program Files (x86)\Steam\steamapps\common\Dyson Sphere Program\BepInEx\config`.
