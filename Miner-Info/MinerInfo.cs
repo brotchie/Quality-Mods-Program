@@ -13,18 +13,23 @@ namespace QualityModsProgram
 
         private class PluginConfig
         {
-            public static ConfigEntry<bool> ShowVeinMaxMinerOutputPerSecond;
+            public static ConfigEntry<bool> ShowVeinMaxMinerOutput;
+            public static ConfigEntry<bool> ShowItemsPerSecond;
         }
 
         void Awake()
         {
-            PluginConfig.ShowVeinMaxMinerOutputPerSecond = Config.Bind(
+            PluginConfig.ShowVeinMaxMinerOutput = Config.Bind(
                 "MinerInfo",
-                "ShowVeinMaxMinerOutputPerSecond",
+                "ShowVeinMaxMinerOutput",
                 true,
-                "Show the maximum number of items per second output by all miners on a vein.");
-            _harmony = Harmony.CreateAndPatchAll(typeof(ShowVeinMaxMinerOutputPerSecondPatch));
-
+                "Show the maximum number of items per time period output by all miners on a vein.");
+            PluginConfig.ShowItemsPerSecond = Config.Bind(
+                "MinerInfo",
+                "ShowItemsPerSecond",
+                true,
+                "If true, show items per second. If false, show items per minute.");
+            _harmony = Harmony.CreateAndPatchAll(typeof(ShowVeinMaxMinerOutputPatch));
         }
 
         void OnDestroy()
@@ -33,7 +38,7 @@ namespace QualityModsProgram
             _harmony.UnpatchSelf();
         }
 
-        private class ShowVeinMaxMinerOutputPerSecondPatch
+        private class ShowVeinMaxMinerOutputPatch
         {
             // Note, we return false along each return path to prevent DSP from calling into the original method.
             [HarmonyPrefix]
@@ -78,13 +83,16 @@ namespace QualityModsProgram
                         });
                         if (itemsPerSecond > 0)
                         {
-                            text = string.Concat(new string[]
+                            string message;
+                            if (PluginConfig.ShowItemsPerSecond.Value)
                             {
-                                text,
-                                "\nMiners max output : ",
-                                itemsPerSecond.ToString("0.0"),
-                                "/s"
-                            });
+                                message = "\nMiners max output : " + itemsPerSecond.ToString("0.0") + "/s";
+                            } else
+                            {
+                                double itemsPerMinute = 60 * itemsPerSecond;
+                                message = "\nMiners max output : " + itemsPerMinute.ToString("0") + "/m";
+                            }
+                            text += message;
                         }
                         ___infoText.text = text;
                     }
