@@ -21,8 +21,8 @@ See detailed installation instructions [here](https://github.com/brotchie/Qualit
 
 ## Changelog
 
-Version 1.0.0
+Version 1.0.1
  - Add `ShowItemsPerSecond` config option. Setting to `false` shows rate in items per minute, rather than items per second.
 
-Version 0.0.1
+Version 1.0.0
 - Initial release

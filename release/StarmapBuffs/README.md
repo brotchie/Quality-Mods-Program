@@ -17,8 +17,8 @@ See detailed installation instructions [here](https://github.com/brotchie/Qualit
 
 ## Changelog
 
-Version 1.0.0
+Version 1.0.1
  - Add `MinStarDetailHoverDistancer` config option (default of 1000) to stop hover from triggering when zoomed into a planetary system.
 
-Version 0.0.1
+Version 1.0.0
 - Initial release
