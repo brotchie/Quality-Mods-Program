@@ -6,6 +6,11 @@ When the Vein Distribution Details Display is on, adds an extra line of text to 
 
 Turn on Vein Distribution Details Display.
 
+
+## How do I see the rate in items-per-minute rather than items-per-second?
+
+Open `quality-mods-program.plugins.miner-info.cfg` in the `steamapps/common/Dyson Sphere Program/BepInEx/config` direction (after running DSP with the plugin installed once). Now edit the config and set the `ShowItemsPerSecond` config value to `false`.
+
 ## Installation
 
 Install BepInEx then copy `Quality-Mods-Program-Miner-Info.dll` into `steamapps/common/Dyson Sphere Program/BepInEx/plugins`.
@@ -15,6 +20,9 @@ See detailed installation instructions [here](https://github.com/brotchie/Qualit
 *A mod in the [Quality Mods Program](https://github.com/brotchie/Quality-Mods-Program) series.*
 
 ## Changelog
+
+Version 1.0.0
+ - Add `ShowItemsPerSecond` config option. Setting to `false` shows rate in items per minute, rather than items per second.
 
 Version 0.0.1
 - Initial release

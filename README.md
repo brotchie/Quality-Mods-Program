@@ -1,7 +1,7 @@
 # Quality Mods Program
 Quality-of-Life mods for Dyson Sphere Program. Currently three mods:
 
-1. Show vein max miner output per second,
+1. Show vein max miner output rate (either per second or per minute)
 2. Pin star with shift click,
 3. Show star details on hover.
 
@@ -10,10 +10,11 @@ See below for details of each mod, **installation instructions are at the bottom
 ## Miner Info Mod
 Plugin: `Quality-Mods-Program-Miner-Info.dll`
 
-**Show Vein Max Miner Output Per Second**
-When the Vein Distribution Details Display is on, add an extra line of text to the Vein Group label with the miners max output per second.
+**Show Vein Max Miner Output**
+When the Vein Distribution Details Display is on, add an extra line of text to the Vein Group label with the miners max output rate (either per second or per minute).
 
-Config Option: `ShowVeinMaxMinerOutputPerSecond`
+Config Option: `ShowVeinMaxMinerOutput`
+Config Option: `ShowItemsPerSecond`. If true, show item rate in second. If false , show item rate in minutes.
 
 ![Vein Max Miner Output Label](images/vein-max-miner-output.jpg?raw=true)
 
@@ -29,6 +30,7 @@ Config Option: `PinStarWithShiftClick`
 Mouse over a star in the star map to view its details. This makes it really easy to scan stars for available resources rather than clicking and then scrolling out.
 
 Config Option: `ShowStarDetailsOnHover`
+Config Option: `MinStarDetailHoverDistancer`. If starmap camera is closer than this distance to current target (1000 units by default) then disable star details on hover. This stops hover from being actived when zoomed into a planetary system.
 
 # Installation
 
