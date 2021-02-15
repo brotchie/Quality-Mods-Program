@@ -16,6 +16,7 @@ namespace QualityModsProgram
         {
             public static ConfigEntry<bool> PinStarWithShiftClick;
             public static ConfigEntry<bool> ShowStarDetailsOnHover;
+            public static ConfigEntry<double> MinStarDetailHoverDistance;
         }
 
         void Awake()
@@ -31,7 +32,12 @@ namespace QualityModsProgram
                 "StarmapBuffs",
                 "ShowStarDetailsOnHover",
                 true,
-                "Show star details on hover.");            
+                "Show star details on hover.");
+            PluginConfig.MinStarDetailHoverDistance = Config.Bind(
+                "StarmapBuffs",
+                "MinStarDetailHoverDistance",
+                1000.0,
+                "If starmap camera is closer than this distance to it's target, then disable star details on hover. This prevents hover being triggered when viewing in-system planets.");
             _harmony.PatchAll(typeof(ShowStarDetailsOnHoverPatch));
         }
 
@@ -89,12 +95,14 @@ namespace QualityModsProgram
                 ref UIStarmap __instance
             )
             {
+                double distanceToCameraTarget = __instance.screenCameraController.dist;
                 if (PluginConfig.ShowStarDetailsOnHover.Value &&
                     __instance.mouseHoverStar != null &&
-                    _activeHoverStar != __instance.mouseHoverStar.star)
+                    _activeHoverStar != __instance.mouseHoverStar.star &&
+                    distanceToCameraTarget > PluginConfig.MinStarDetailHoverDistance.Value)
                 {
                     _activeHoverStar = __instance.mouseHoverStar.star;
-                }
+                }                
             }
 
             [HarmonyPostfix]
