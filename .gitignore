@@ -3,3 +3,4 @@ libs/*.dll
 */bin/*
 */obj/*
 *.swp
+*.zip
